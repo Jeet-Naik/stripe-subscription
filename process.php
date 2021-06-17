@@ -22,9 +22,11 @@ if(!empty($_POST['subscr_plan']) && !empty($_POST['stripeToken'])){
     $planName = $planInfo['name']; 
     $planPrice = $planInfo['price']; 
     $planInterval = $planInfo['interval']; 
+
+    echo $planInterval;die;
      
     // Include Stripe PHP library 
-    require_once 'stripe-php/init.php'; 
+    // require_once 'stripe-php/init.php'; 
      
     // Set API key 
     \Stripe\Stripe::setApiKey(STRIPE_API_KEY); 
